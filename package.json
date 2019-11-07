@@ -37,7 +37,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged",
-      "pre-push": "yarn test:hook"
+      "pre-push": "yarn test:hook && npm test -- --coverage"
     }
   }
 }
