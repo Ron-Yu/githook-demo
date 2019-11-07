@@ -11,7 +11,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:hook": "react-scripts test --watchAll=false",
+    "test:hook": "react-scripts test -- --coverage --watchAll=false",
     "test:coverage": "yarn test -- --coverage --watchAll=false",
     "eject": "react-scripts eject"
   },
@@ -38,7 +38,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged",
-      "pre-push": "yarn test:coverage"
+      "pre-push": "yarn test:hook"
     }
   }
 }
