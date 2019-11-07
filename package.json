@@ -13,6 +13,7 @@
     "test": "react-scripts test",
     "test:hook": "react-scripts test --watchAll=false",
     "test:coverage": "yarn test -- --coverage --watchAll=false",
+    "codeclimate": "codeclimate analyze /src",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -38,7 +39,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged",
-      "pre-push": "yarn test:coverage"
+      "pre-push": "yarn test:coverage && yarn codeclimate"
     }
   }
 }
